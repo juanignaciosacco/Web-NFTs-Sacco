@@ -195,6 +195,16 @@ main{
     margin: 20px auto;
 }
 
+#tablaInicio tbody tr td img{
+    filter: blur(6px) grayscale(100);
+    transition: all 0.5s;
+}
+
+#tablaInicio tbody tr td img:hover{
+    filter: blur(0px) grayscale(0);
+    transform: scale(1.1);
+}
+
 /* Parrafo pagina inico */
 
 #infoExtra{
@@ -396,14 +406,49 @@ body#colecciones{
     justify-self: center;
 }
 
-/* Efecto desenfoque a las imagenes de las colecciones */
+/* Efecto desenfoque y sepia a las imagenes de las colecciones y modificadores para las posiciones de los diferentes items. Los de izquierda y derecha */
 .itemImg{
     transition: all 1s;
-    filter: blur(10px);
+    filter: blur(10px) sepia(100);
+}
+
+.itemImg--izquierda2{
+    transition: all 1s;
+    filter: blur(10px) sepia(100);
+}
+
+.itemImg--derecha1{
+    transition: all 1s;
+    filter: blur(10px) grayscale(100);
+}
+
+.itemImg--derecha2{
+    transition: all 1s;
+    filter: blur(10px) grayscale(100);
 }
 
 .itemImg:hover{
-    filter: blur(0px);
+    filter: blur(0px) sepia(0);
+    transform: scale(3) translate(50%,  30%);
+    z-index: 101;
+}
+
+.itemImg--izquierda2:hover{
+    filter: blur(0px) sepia(0);
+    transform: scale(3) translate(10%,  30%);
+    z-index: 101;
+}
+
+.itemImg--derecha1:hover{
+    filter: blur(0px) sepia(0);
+    transform: scale(3) translate(-10%,  30%);
+    z-index: 101;
+}
+
+.itemImg--derecha2:hover{
+    filter: blur(0px) sepia(0);
+    transform: scale(3) translate(-50%,  30%);
+    z-index: 101;
 }
 
 /* Clases genericas de los items de las tablas donde van posicionados */
