@@ -1,0 +1,13 @@
+
+@media only screen and (max-width: 576px){
+    
+    table{
+        width: 100%;
+        height: 150px;
+    }
+
+    .imgTabla{
+        width: 70px;
+    }
+
+}

@@ -5,26 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilosB.css">
     <title>Contacto NFTs</title>
 </head>
-<body id="contactenos">
+<body id="pagContacto">
 
-    <header class="barraNav">
-        <!-- <h1>Inicio</h1> -->
-        <img src="/Logo/logo.png" height="50px" width="50px" alt="Logo" id="logo">
-        <input type="checkbox" id="check">
-        <label for="check" class="iconoMenu"><i class="fa-solid fa-bars"></i></label>
-        <nav class="nav">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="roadmap.html">Roadmap</a></li>
-            <li><a href="colecciones.html">Colecciones</a></li>
-            <li><a href="sobreNosotros.html">Sobre nosotros</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
+    <header>
+        <!-- Barra navegacion - Inicio -->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Logo</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#pagInicio">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#pagRoadmap">Roadmap</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#pagColecciones">Colecciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#pagSobreNosotros">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
+        <!-- Barra navegacion - Fin -->
     </header>
+
     <main id="contacto">
             <section id="infoContacto">
                 <h1>Contacto</h1>
@@ -78,16 +96,16 @@
                 </form>
             </section>
     </main>
-    <footer id="footerContactenos">
-        <section id="inputsFooter">
+    <footer class="container-fluid mt-5 pt-4 pb-4 text-center bg-dark">
+        <section>
             <input id="mailSuscripcion" type="email" name="mail" placeholder="Email for subscription">
             <input id="submit" type="submit" value="submit">
         </section>
-            <br>
+        <br>
         <section id="iconosFooter">
-            <img src="/Imagenes/Iconos/twitter.png" width="30" height="30" alt="Icono Twitter by Dave Gandy">
-            <img src="/Imagenes/Iconos/facebook.png" width="30" height="30" alt="Icono Facebook by Freepik">
-            <img src="/Imagenes/Iconos/instagram.png" width="30" height="30" alt="Icono Instragram by Freepik">
+            <img src="Imagenes/Iconos/twitter.png" width="30" height="30" alt="Icono Twitter by Dave Gandy">
+            <img src="Imagenes/Iconos/facebook.png" width="30" height="30" alt="Icono Facebook by Freepik">
+            <img src="Imagenes/Iconos/instagram.png" width="30" height="30" alt="Icono Instragram by Freepik">
         </section>
         <section id="menuFooter">
             <br>
@@ -97,7 +115,7 @@
             <p>... copyright 2022 ©</p>
             <br>
             <a href="politicasDePrivacidad.html">Politicas de privacidad</a>
-    </section>
+        </section>
     </footer>
 
 </body>
