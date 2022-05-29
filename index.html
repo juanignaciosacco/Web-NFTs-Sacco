@@ -18,14 +18,14 @@
     <!-- Inicia el header -->
     <header>
         <!-- Barra navegacion - Inicio -->
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Logo</a>
+                <a class="navbar-brand" href="#"><img src="Logo/logo.png" width="40px" height="40px" alt="Logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" href="#">Inicio</a>
@@ -52,6 +52,7 @@
 
     <!-- Comienza el cuerpo de la pagina -->
     <main>
+        <!-- Comienza seccion texto informativo y video -->
         <section class="container-fluid text-center mt-5">
             <div class="row">
                 <div class="col-sm-12">
@@ -66,27 +67,28 @@
                     adipisicing elit. Aperiam dolor recusandae cupiditate non odio sunt eveniet, et saepe! Unde sapiente
                     fuga quae labore est voluptates consequatur in deserunt saepe distinctio.</p>
                 </div>
-                <div class="col-sm-12">
-                    <iframe id="videoInicio" width="100%" height="225" src="https://www.youtube.com/embed/4QXESNgtsq8"
+                <div class="col-sm-12 mt-5">
+                    <iframe class="videoInicio" src="https://www.youtube.com/embed/4QXESNgtsq8"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
                 </div>
             </div>
         </section>
+        <!-- Finaliza seccion texto informativo y video -->
     
+        <!-- Comienza seccion tabla colecciones -->
         <section class="container-fluid mt-5">
             <h2 class="text-center">Coleccionables</h2>
-            <table class="table table-hover">
+            <table class="table table-dark table-hover align-middle">
                 <thead>
-                    <tr class="table-secondary">
+                    <tr class="table-secondary text-center">
                         <th>NFT</th>
                         <th>Colección</th>
                         <th>Fecha de publicación</th>
                         <th>Precio</th>
                     </tr>
                 </thead>
-
                 <tbody>
                     <tr>
                         <td align="center"><img src="Imagenes/Colecciones/Coleccion 1/Auto 2.jpg" alt="Smiley face" class="imgTabla"></td>
@@ -109,7 +111,9 @@
                 </tbody>
             </table>
         </section> 
+        <!-- Finaliza seccion tabla colecciones -->
 
+        <!-- Comienza seccion informacion extra -->
         <section class="container-fluid text-center mt-5">
             <h2>Informacion</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor labore, architecto unde quos dolore
@@ -120,9 +124,11 @@
             nemo modi alias veniam consectetur perspiciatis expedita cum atque ratione iure quo, numquam ex
             voluptatem provident, error exercitationem optio, explicabo quia?</p>
         </section>
+        <!-- Finaliza seccion informacion extra -->
     </main>
 
-    <footer class="container-fluid mt-5 pt-4 pb-4 text-center bg-dark">
+    <!-- Comienza footer -->
+    <footer class="container-fluid mt-5 pt-4 pb-4 text-center">
         <section>
             <input id="mailSuscripcion" type="email" name="mail" placeholder="Email for subscription">
             <input id="submit" type="submit" value="submit">
@@ -143,7 +149,9 @@
             <a href="politicasDePrivacidad.html">Politicas de privacidad</a>
         </section>
     </footer>
+    <!-- Finaliza footer -->
 
+    <!-- Scripts bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
     </script>
