@@ -1,4 +1,4 @@
-body#pagInicio{
+body#pagInicio, #pagRoadmap{
     background-image: url(Imagenes/Fondos/galaxia3.jpg);
     background-repeat: no-repeat;
     background-color: #fff;
@@ -6,8 +6,50 @@ body#pagInicio{
     color: #fff;
 }
 
+/* Pagina Inicio */
+
 table tr td{
     color: #fff;
+}
+
+/* Pagina Roadmap */
+
+.item{
+    transition: all 0.8s;
+}
+
+.item:hover{
+    background-color: rgba(255, 255, 255, 0.311);
+    border-radius: 10px;
+}
+
+.item1{
+    margin: auto;
+    width: 300px;
+    border-top: 5px dashed grey;
+    border-left: 5px dashed grey;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    list-style: none;
+}
+
+.item1:first-child{
+    margin: auto;
+    width: 300px;
+    border-top: 0;
+    border-left: 5px dashed grey;
+}
+
+.item2{
+    margin: auto;
+    width: 300px;
+    border-top: 5px dashed grey;
+    border-right: 5px dashed grey;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    list-style: none;
 }
 
 @media only screen and (max-width: 575px){
