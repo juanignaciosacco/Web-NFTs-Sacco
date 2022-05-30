@@ -11,18 +11,28 @@ h1{
 }
 
 h2{
-    color: rgb(34, 119, 111);
+    color: rgb(42, 150, 139);
+}
+
+label{
+    color: rgb(42, 150, 139);
 }
 
 legend{
-    color: rgb(34, 119, 111);
+    color: turquoise;
 }
 
 main{
     min-height: calc(100vh - 310px);
 }
+
 a{
     color: turquoise;
+}
+
+#mailSuscripcion{
+    padding: 0.4rem;
+    vertical-align: middle;
 }
 
 /* Pagina Inicio */
@@ -45,8 +55,8 @@ table tr td{
 .item1{
     margin: auto;
     width: 300px;
-    border-top: 5px dashed grey;
-    border-left: 5px dashed grey;
+    border-top: 5px dashed turquoise;
+    border-left: 5px dashed turquoise;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     border-bottom-left-radius: 8px;
@@ -57,14 +67,14 @@ table tr td{
     margin: auto;
     width: 300px;
     border-top: 0;
-    border-left: 5px dashed grey;
+    border-left: 5px dashed turquoise;
 }
 
 .item2{
     margin: auto;
     width: 300px;
-    border-top: 5px dashed grey;
-    border-right: 5px dashed grey;
+    border-top: 5px dashed turquoise;
+    border-right: 5px dashed turquoise;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
