@@ -7,7 +7,7 @@ body#pagInicio, #pagRoadmap, #pagColecciones, #pagSobreNosotros{
 }
 
 main{
-    min-height: 800px;
+    min-height: calc(100vh - 310px);
 }
 
 /* Pagina Inicio */
@@ -586,11 +586,6 @@ table tr td{
 }
 
 @media only screen and (min-width: 1200px){
-
-    #pagSobreNosotros{
-        height: 100vh;
-    }
-
     .imgTabla{
         width: 180px;
     }
