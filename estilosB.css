@@ -1,4 +1,4 @@
-body#pagInicio, #pagRoadmap, #pagColecciones, #pagSobreNosotros{
+body#pagInicio, #pagRoadmap, #pagColecciones, #pagSobreNosotros, #pagContacto{
     background-image: url(Imagenes/Fondos/galaxia3.jpg);
     background-repeat: no-repeat;
     background-color: #fff;
@@ -6,8 +6,23 @@ body#pagInicio, #pagRoadmap, #pagColecciones, #pagSobreNosotros{
     color: #fff;
 }
 
+h1{
+    color: turquoise;
+}
+
+h2{
+    color: rgb(34, 119, 111);
+}
+
+legend{
+    color: rgb(34, 119, 111);
+}
+
 main{
     min-height: calc(100vh - 310px);
+}
+a{
+    color: turquoise;
 }
 
 /* Pagina Inicio */
