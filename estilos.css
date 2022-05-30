@@ -1,1527 +1,446 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
-
-
-*{
-    color: white;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Raleway", sans-serif;
-    font-size: 16px;
+body#pagInicio, #pagRoadmap, #pagColecciones, #pagSobreNosotros, #pagContacto{
+    background-image: url(Imagenes/Fondos/galaxia3.jpg);
+    background-repeat: no-repeat;
+    background-color: #fff;
+    background-size: cover;
+    color: #fff;
 }
 
 h1{
-    text-align: center;
-    font-size: 2rem;
+    color: turquoise;
 }
 
 h2{
-    text-align: center;
-    font-size: 1.5rem;
+    color: rgb(42, 150, 139);
 }
 
-#inicio, #sobreNos, #contactenos{
-    background-color: black;
-    background-image: url(/Imagenes/Fondos/galaxia.jpg);
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-size: 1000px;
+label{
+    color: rgb(42, 150, 139);
 }
 
-#pagRoadmap, #colecciones{
-    background-color: black;
-    background-image: url(/Imagenes/Fondos/galaxia2.jpg);
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-size: 1000px;
+legend{
+    color: turquoise;
 }
 
-/* Header */
-
-/* Este icono es para cuando la pantalla es menor a 600 px y ocultar el menu que se muestra cuando hago click en el icono mediante un checkbox */
-.iconoMenu{
-    color: #fff;
-    float: right;
-    margin-right: 30px;
-    margin-top: 20px;
-    cursor: pointer;
-    display: none;
+main{
+    min-height: calc(100vh - 310px);
 }
 
-.iconoMenu i{
-    font-size: 1.5rem;
+a{
+    color: turquoise;
 }
 
-#check{
-    display: none;
-}
-
-img#logo{
-    z-index: 1001;
-    position: fixed;
-    top: 8px;
-    left: 10px;
-}
-
-/* Utilizo display flex para poner el menu vertical */
-.nav ul{
-    position: fixed;
-    right: 80px;
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-}
-
-.nav ul li{
-    padding: 30px;
-    font-weight: bold;
-}
-
-.nav ul li a{
-    text-decoration: none;
-}
-
-.nav ul li a:hover{
-    color: black;
-}
-
-/* Footer */
-
-/* Utilixo display flex para posicionar bien el footer */
-footer{
-    grid-column: 1/3;
-    grid-row: 3/4;
-    width: 100%;
-    margin-top: 70px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    background-image: url(/Imagenes/Fondos/waves.svg);
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-color:rgba(128, 128, 128);
-    border-top-left-radius: 45%;
-    border-top-right-radius: 45%;
-}
-
-footer input#mailSuscripcion{
-    text-align: center;
-    padding: 5px;
-    color: black;
-}
-
-footer input#submit{
-    width: 80px;
-    padding: 5px;
-    color: black;
-}
-
-footer #iconosFooter{
-    padding: 10px;
-}
-
-footer #menuFooter a, footer #menuFooter p{
-    color: black;
-    margin-top: 15px;
+#mailSuscripcion{
+    padding: 0.4rem;
+    vertical-align: middle;
 }
 
 /* Pagina Inicio */
 
-/* Creo un grid con 3 filas para posicionas el header, main y footer */
-body{
-    display: grid;
-    grid-template-columns: repeat(2, 3fr);
-    grid-template-rows: 60px auto 350px;
-    row-gap: 30px;
+table tr td{
+    color: #fff;
 }
-
-header{
-    grid-column: 1/3;
-    grid-row: 1/2;
-    position: fixed;
-    background-color: rgba(128, 128, 128);
-    width: 100%;
-    height: 65px;
-    z-index: 1005;
-}
-
-main{
-    grid-column: 1/3;
-    grid-row: 2/3;
-    background-color: rgba(0, 0, 0, 0.462);
-}
-
-/* Creo otro grid dentro del grid body para posicionar los items del main */
-#infoInicio{
-    display: grid;
-    grid-template-columns: repeat(2, 3fr);
-    grid-template-rows: 20px auto;
-    row-gap: 20px;
-    column-gap: 20px;
-}
-
-#infoInicio h2{
-    grid-column: 1/3;
-    grid-row: 1/2;
-    justify-self: center;
-    margin-top: 10px;
-}
-
-#textoInicio{
-    grid-column: 1/2;
-    grid-row: 2/3;
-    margin-left: 20px;
-    margin-top: 10px;
-    text-align: center;
-    justify-content: center;
-}
-
-#videoInicio{
-    grid-column: 2/3;
-    grid-row: 2/3;
-    margin-top: 10px;
-    justify-self: center;
-}
-
-#coleccionables{
-    margin-top: 90px;
-}
-
-/* Tabla pagina inicio */
-
-#tablaInicio{
-    margin: 20px auto;
-}
-
-#tablaInicio tbody tr td img{
-    filter: blur(6px) grayscale(100);
-    transition: all 0.5s;
-}
-
-#tablaInicio tbody tr td img:hover{
-    filter: blur(0px) grayscale(0);
-    transform: scale(1.1);
-}
-
-/* Parrafo pagina inico */
-
-#infoExtra{
-    margin-top: 90px;
-    padding-top: 20px;
-}
-
-#infoExtra p{
-    margin-top: 20px;
-    text-align: center;
-} 
 
 /* Pagina Roadmap */
 
-/* Creo un gird para el body de la pagina Roadmap */
-body#pagRoadmap{
-    display: grid;
-    grid-template-columns: repeat(2, 3fr);
-    grid-template-rows: 60px auto 350px;
-    row-gap: 30px;
+.item{
+    transition: all 0.8s;
 }
 
-body#pagRoadmap header.barraNav{
-    z-index: 1001;
+.item:hover{
+    background-color: rgba(255, 255, 255, 0.311);
+    border-radius: 10px;
 }
-
-#timeline{
-    grid-row: 2/3;
-    grid-column: 1/3;
-    height: auto;
-}
-
-/* Aqui modifico la linea central del roadmap */
-section.line svg{
-    height: 1600px;
-}
-
-.line {
-    position: absolute;
-    margin-left: 50%;
-}
-
-/* Este es el icono fixed que baja con el scroll y recorre la linea central del roadmap */
-#iconoLine{
-    position: fixed;
-    top: 200px;
-    left: 49.2%;
-    z-index: 10;
-}
-
-/* Creo un grid para la lista del roadmap y los poasciono intercalados de izquierda a derecha */
-.objetivosRoadmap{
-    display: grid;
-    grid-template-columns: repeat(2, 3fr);
-    grid-template-rows: repeat(13, auto);
-}
-
-.objetivosRoadmap h1{
-    grid-row: 1/2;
-    grid-column: 1/3;
-    margin: 10px 0 20px 0;
-}
-
-/* Coloco los items en su respectivos lugares del grid */
 
 .item1{
-    grid-row: 2/3;
-    grid-column: 1/2;
-    justify-self: center;
+    margin: auto;
+    width: 300px;
+    border-top: 5px dashed turquoise;
+    border-left: 5px dashed turquoise;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    list-style: none;
 }
+
+.item1:first-child{
+    margin: auto;
+    width: 300px;
+    border-top: 0;
+    border-left: 5px dashed turquoise;
+}
+
 .item2{
-    grid-row: 3/4;
-    grid-column: 2/3;
-    justify-self: center;
+    margin: auto;
+    width: 300px;
+    border-top: 5px dashed turquoise;
+    border-right: 5px dashed turquoise;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    list-style: none;
 }
-.item3{
-    grid-row: 4/5;
-    grid-column: 1/2;
-    justify-self: center;
-}
-.item4{
-    grid-row: 5/6;
-    grid-column: 2/3;
-    justify-self: center;
-}
-.item5{
-    grid-row: 6/7;
-    grid-column: 1/2;
-    justify-self: center;
-}
-.item6{
-    grid-row: 7/8;
-    grid-column: 2/3;
-    justify-self: center;
-}
-.item7{
-    grid-row: 8/9;
-    grid-column: 1/2;
-    justify-self: center;
-}
-.item8{
-    grid-row: 9/10;
-    grid-column: 2/3;
-    justify-self: center;
-}
-.item9{
-    grid-row: 10/11;
-    grid-column: 1/2;
-    justify-self: center;
-}
-.item10{
-    grid-row: 11/12;
-    grid-column: 2/3;
-    justify-self: center;
-}
-.item11{
-    grid-row: 12/13;
-    grid-column: 1/2;
-    justify-self: center;
-}
-.item12{
-    grid-row: 13/14;
-    grid-column: 2/3;
-    justify-self: center;
-}
-
-.objetivosRoadmap li ol{
-    padding: 20px;
-}
-
-/* Pagina colecciones */
-
-/* Creo el grid para el body de pagina colecciones */
-body#colecciones{
-    display: grid;
-    grid-template-columns: repeat(2, 3fr);
-    grid-template-rows: 60px auto auto auto 350px;
-    row-gap: 30px;
-}
-
-/* Creo grid para posicionar las tablas de las diferentes colecciones */
-#pagColecciones{
-    grid-row: 2/3;
-    grid-column: 1/3;
-    display: grid;
-    grid-template-columns: repeat(2, 3fr) ;
-    grid-template-rows: repeat(4, auto);
-}
-
-#pagColecciones h1{
-    grid-row: 1/2;
-    grid-column: 1/3;
-}
-
-/* Creo grid dentro del grid de posicionamiento de tablas para crear las tablas de las diferentes colecciones */
-#tablaColecciones1{
-    grid-row: 2/3;
-    grid-column: 1/3;
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(4, 25%);
-    grid-template-rows: repeat(3, auto);
-    row-gap: 20px;
-}
-#tablaColecciones2{
-    grid-row: 3/4;
-    grid-column: 1/3;
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(4, 25%);
-    grid-template-rows: repeat(3, auto);
-    row-gap: 20px;
-}
-#tablaColecciones3{
-    grid-row: 4/5;
-    grid-column: 1/3;
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(4, 25%);
-    grid-template-rows: repeat(3, auto);
-    row-gap: 20px;
-}
-
-/* Posiciono el footer dentro de la grid del body de la pagina colecciones */
-#footerColecciones{
-    grid-row: 5/6;
-    grid-column: 1/3;
-}
-
-/* Clase generica del texto de las tablas */
-.txtTabla{
-    text-align: center;
-}
-
-/* Clase generica del texto tipo caption de las tablas */
-.caption{
-    grid-row: 1/2;
-    grid-column: 1/5;
-    justify-self: center;
-}
-
-/* Efecto desenfoque y sepia a las imagenes de las colecciones y modificadores para las posiciones de los diferentes items. Los de izquierda y derecha */
-.itemImg{
-    transition: all 1s;
-    filter: blur(10px) sepia(100);
-}
-
-.itemImg--izquierda2{
-    transition: all 1s;
-    filter: blur(10px) sepia(100);
-}
-
-.itemImg--derecha1{
-    transition: all 1s;
-    filter: blur(10px) grayscale(100);
-}
-
-.itemImg--derecha2{
-    transition: all 1s;
-    filter: blur(10px) grayscale(100);
-}
-
-.itemImg:hover{
-    filter: blur(0px) sepia(0);
-    transform: scale(3) translate(50%,  30%);
-    z-index: 101;
-}
-
-.itemImg--izquierda2:hover{
-    filter: blur(0px) sepia(0);
-    transform: scale(3) translate(10%,  30%);
-    z-index: 101;
-}
-
-.itemImg--derecha1:hover{
-    filter: blur(0px) sepia(0);
-    transform: scale(3) translate(-10%,  30%);
-    z-index: 101;
-}
-
-.itemImg--derecha2:hover{
-    filter: blur(0px) sepia(0);
-    transform: scale(3) translate(-50%,  30%);
-    z-index: 101;
-}
-
-/* Clases genericas de los items de las tablas donde van posicionados */
-.itemImg1{
-    grid-row: 2/3;
-    grid-column: 1/2;
-    justify-self: center;
-}
-
-.itemImg2{
-    grid-row: 2/3;
-    grid-column: 2/3;
-    justify-self: center;
-}
-
-.itemImg3{
-    grid-row: 2/3;
-    grid-column: 3/4;
-    justify-self: center;
-}
-
-.itemImg4{
-    grid-row: 2/3;
-    grid-column: 4/5;
-    justify-self: center;
-}
-
-.itemTxt1{
-    grid-row: 3/4;
-    grid-column: 1/2;
-    justify-self: center;
-}
-
-.itemTxt2{
-    grid-row: 3/4;
-    grid-column: 2/3;
-    justify-self: center;
-}
-
-.itemTxt3{
-    grid-row: 3/4;
-    grid-column: 3/4;
-    justify-self: center;
-}
-
-.itemTxt4{
-    grid-row: 3/4;
-    grid-column: 4/5;
-    justify-self: center;
-}
-
 
 /* Pagina sobre nosotros */
 
-body#sobreNos{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 60px auto 350px;
+.txtSobreNos::first-letter{
+    color: grey;
+    font-size: 35px;
 }
 
-#sobreNosotros{
-    grid-column: 1/2;
-    grid-row: 2/3;
-    text-align: center;
-    margin: 20px 10px 0px 10px;
-}
+@media only screen and (max-width: 575px){
 
-#sobreNosotros h1{
-    margin: 0px 0px 20px 0px;
-}
-
-#footerSobreNos{
-    grid-column: 1/2;
-    grid-row: 3/4;
-}
-
-.tablaMiembros{
-    margin-top: 30px;
-    display: grid;
-    grid-template-columns: repeat(4, 1.5fr);
-    grid-template-rows: repeat(3, auto);
-    row-gap: 30px;
-}
-
-.captionMiembros{
-    grid-column: 1/5;
-    grid-row: 1/2;
-}
-
-.imgMiembros1{
-    grid-column: 1/2;
-    grid-row: 2/3;
-    justify-self: center;
-}
-
-.imgMiembros2{
-    grid-column: 2/3;
-    grid-row: 2/3;
-    justify-self: center;
-}
-
-.imgMiembros3{
-    grid-column: 3/4;
-    grid-row: 2/3;
-    justify-self: center;
-}
-.imgMiembros4{
-    grid-column: 4/5;
-    grid-row: 2/3;
-    justify-self: center;
-}
-
-.txtMiembros1{
-    grid-column: 1/2;
-    grid-row: 3/4;
-    justify-self: center;
-}
-.txtMiembros2{
-    grid-column: 2/3;
-    grid-row: 3/4;
-    justify-self: center;
-}
-.txtMiembros3{
-    grid-column: 3/4;
-    grid-row: 3/4;
-    justify-self: center;
-}
-.txtMiembros4{
-    grid-column: 4/5;
-    grid-row: 3/4;
-    justify-self: center;
-}
-
-.txtMiembros{
-    text-align: center;
-}
-
-.imagenCircular{
-    border-radius: 50%;
-}
-
-/* Pagina Contacto */
-
-/* Creacion grid para cuerpo pagina contactenos */
-body#contactenos{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 60px auto 350px;
-}
-
-#contacto{
-    grid-row: 2/3;
-    grid-column: 1/2;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-content: space-between;
-}
-
-#infoContacto{
-    text-align: center;
-    padding: 40px;
-    justify-self: center;
-}
-
-#infoContacto h1{
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-#infoContacto a{
-    text-decoration: none;
-}
-
-#footerContactenos{
-    grid-row: 3/4;
-    grid-column: 1/2;
-}
-
-
-/* Formulario contacto */
-
-#formularioContacto{
-    margin: 50px;
-    text-align: center;
-}
-
-#formularioContacto form input{
-    padding: 5px;
-    margin: 10px;
-    color: black;
-}
-
-#formularioContacto form select{
-    margin: 10px;
-    padding: 5px;
-    color: black;
-}
-
-#formularioContacto form label{
-    margin: 10px;
-    padding: 5px;
-}
-
-#formularioContacto fieldset{
-    width: auto;
-    background-color: rgba(103, 103, 103, 0.8);
-}
-
-.iconosContacto{
-    vertical-align: middle;
-    padding: 15px;
-}
-
-@media only screen and (max-width: 600px){
-
-    p{
-        font-size: 0.9rem;
-    }
-
-    /* Grid del body incial */
-    body{
-        display: grid;
-        grid-template-columns: 100vw;
-        grid-template-rows: 60px auto 350px;
-        row-gap: 30px;
-    }
-
-    /* Header */
-
-    /* Este icono es para cuando la pantalla es menor a 600 px y ocultar el menu que se muestra cuando hago click en el icono mediante un checkbox */
-    .iconoMenu{
-        display: block;
-
-    }
-
-    .nav ul{
-        position: fixed;
-        display: flex;
-        flex-direction: column;
-        list-style: none;
+    table{
         width: 100%;
-        height: 80vh;
-        font-weight: bolder;
-        background-color: rgb(128, 128, 128);
-        top: 80px;
-        right: -100%;
-        text-align: center;
-        transition: all 0.5s;
-        border: 2px solid rgb(0, 0, 0) ;
-        border-radius: 20px;
-        z-index: 1000;
-    }
-    
-    .nav ul li{
-        display: block;
-        margin: 35px 0;
-        line-height: 10px;
-        padding: 0;
-        margin-top: 50px;
-
+        height: 150px;
     }
 
-    .nav ul li a{
-        font-size: 20px;
+    .imgTabla{
+        width: 70px;
     }
 
-    .nav ul li a:hover, .nav ul li a:active{
-        background: none;
-        color: black;
+    .videoInicio{
+        width: 100%; 
+        height: 225px;
     }
 
-    /* Aplico checkbox para mostrar menu cuando hago click */
+    /* Inicio diseño pagina Colecciones */
+    /* Tamaño imagenes */
+    .vAlign{
+        height: 80px;
+    }
+    /* Fin diseña pagina colecciones */
 
-    #check:checked ~ .nav ul{
-        right: 0;
-        width: 50vw;
-        margin-right: 20px;
+    /* Inicio pagina Sobre nosoros */
+    .imgMiembros{
+        height: 170px;
+        width: 250px;
     }
-    
-    /* Footer */
-
-    footer{
-        grid-column: 1/3;
-        grid-row: 3/4;
-        width: 100%;
-        margin-top: 70px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        background-image: url(/Imagenes/Fondos/waves.svg);
-        background-repeat: no-repeat;
-        background-position: bottom;
-        background-color:rgba(128, 128, 128);
-        border-top-left-radius: 45%;
-        border-top-right-radius: 45%;
-    }
-    
-    footer input#mailSuscripcion{
-        width: 150px;
-        text-align: center;
-        padding: 5px;
-        color: black;
-        font-size: 0.8rem;
-    }
-    
-    footer input#submit{
-        width: 80px;
-        padding: 5px;
-        color: black;
-        font-size: 0.8rem;
-    }
-    
-    footer #iconosFooter{
-        padding: 10px;
-    }
-    
-    footer #menuFooter a, footer #menuFooter p{
-        color: black;
-        margin-top: 15px;
-        font-size: 0.8rem;
-        text-decoration: none;
-    }
-
-    footer #menuFooter a:hover{
-        text-decoration: underline;
-    }
-
-      /* Pagina Inicio */
-
-    #infoInicio{
-        display: grid;
-        grid-template-columns: 100vw;
-        grid-template-rows: 20px auto 280px;
-        row-gap: 20px;
-        column-gap: 20px;
-    }
-
-    #infoInicio h2{
-        grid-column: 1/2;
-        grid-row: 1/2;
-        justify-self: center;
-        margin-top: 10px;
-    }
-    
-    #textoInicio{
-        grid-column: 1/2;
-        grid-row: 2/3;
-        margin: 10px 5px 0px 5px;
-        text-align: center;
-        justify-self: center;
-    }
-    
-    #videoInicio{
-        width: 90vw;
-        grid-column: 1/2;
-        grid-row: 3/4;
-        margin-top: 10px;
-        align-self: center;
-        justify-self: center;
-    }
-
-    #coleccionables{
-        margin-top: 70px;
-    }
-    
-    #tablaInicio{
-        width: 350px;
-        margin: 20px auto;
-    }
-
-    #tablaInicio th{
-        font-size: 0.9rem;
-    }
-
-    #tablaInicio td img{
-        width: 100px;
-    }
-
-    #tablaInicio td{
-        font-size: 0.8rem;
-    }
-    
-    #infoExtra{
-        margin-top: 70px;
-        padding-top: 20px;
-    }
-    
-    #infoExtra p{
-        margin: 20px 5px 0px 5px;
-        font-size: 0.9rem;
-        text-align: center;
-    } 
-
-    /* Pagina Roadmap */
-
-    #iconoLine{
-        position: fixed;
-        top: 200px;
-        left: 48%;
-        z-index: 10;
-    }
-
-    /* Pagina Colecciones */
-
-    /* Creo grid dentro del grid de posicionamiento de tablas para crear las tablas de las diferentes colecciones */
-    #tablaColecciones1{
-        grid-row: 2/3;
-        grid-column: 1/3;
-        margin-top: 20px;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: repeat(10, auto);
-        row-gap: 20px;
-    }
-    #tablaColecciones2{
-        grid-row: 3/4;
-        grid-column: 1/3;
-        margin-top: 20px;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: repeat(10, auto);
-        row-gap: 20px;
-    }
-    #tablaColecciones3{
-        grid-row: 4/5;
-        grid-column: 1/3;
-        margin-top: 20px;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: repeat(10, auto);
-        row-gap: 20px;
-    }
-    /* Clase generica del texto tipo caption de las tablas */
-    .caption{
-        grid-row: 1/2;
-        grid-column: 1/2;
-        justify-self: center;
-    }
-
-    /* Clases genericas de los items de las tablas donde van posicionados */
-    .itemImg1{
-        grid-row: 2/3;
-        grid-column: 1/2;
-        justify-self: center;
-    }
-
-    .itemImg2{
-        grid-row: 4/5;
-        grid-column: 1/2;
-        justify-self: center;
-    }
-
-    .itemImg3{
-        grid-row: 6/7;
-        grid-column: 1/2;
-        justify-self: center;
-    }
-
-    .itemImg4{
-        grid-row: 8/9;
-        grid-column: 1/2;
-        justify-self: center;
-    }
-
-    .itemTxt1{
-        grid-row: 3/4;
-        grid-column: 1/2;
-        justify-self: center;
-    }
-
-    .itemTxt2{
-        grid-row: 5/6;
-        grid-column: 1/2;
-        justify-self: center;
-    }
-
-    .itemTxt3{
-        grid-row: 7/8;
-        grid-column: 1/2;
-        justify-self: center;
-    }
-
-    .itemTxt4{
-        grid-row: 9/10;
-        grid-column: 1/2;
-        justify-self: center;
-    }
-
-    .txtMiembros{
-        font-size: 0.9rem;
-    }
-
-    /* Pagina Sobre nosotros */
-    /* Maquetacion grid miembros */
 
     .tablaMiembros{
-        margin-top: 30px;
         display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: repeat(9, auto);
-        row-gap: 30px;
+        grid-template-columns: 1;
+        row-gap: 20px;
     }
-    
+
     .captionMiembros{
         grid-column: 1/2;
         grid-row: 1/2;
     }
-    
+
     .imgMiembros1{
         grid-column: 1/2;
         grid-row: 2/3;
-        justify-self: center;
     }
-    
     .imgMiembros2{
         grid-column: 1/2;
         grid-row: 4/5;
-        justify-self: center;
     }
-    
     .imgMiembros3{
         grid-column: 1/2;
         grid-row: 6/7;
-        justify-self: center;
     }
-
     .imgMiembros4{
         grid-column: 1/2;
         grid-row: 8/9;
-        justify-self: center;
     }
-    
+
     .txtMiembros1{
         grid-column: 1/2;
         grid-row: 3/4;
-        justify-self: center;
     }
-
     .txtMiembros2{
         grid-column: 1/2;
         grid-row: 5/6;
-        justify-self: center;
     }
-
     .txtMiembros3{
         grid-column: 1/2;
         grid-row: 7/8;
-        justify-self: center;
     }
-
     .txtMiembros4{
         grid-column: 1/2;
         grid-row: 9/10;
-        justify-self: center;
     }
+    /* fin pagina sobre nosotros */
 
-    /* Pagina contacto */
-
-    #contacto{
-        grid-row: 2/3;
-        grid-column: 1/2;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        align-content: space-between;
-    }
-
-    #infoContacto{
-        text-align: center;
-        padding: 20px;
-        justify-self: center;
-    }
 }
 
-@media only screen and (min-width: 601px) and (max-width: 900px){
+@media only screen and (min-width: 576px) and (max-width: 767px){
 
-    body{
-        display: grid;
-        grid-template-columns: 100vw;
-        grid-template-rows: 60px auto 350px;
-        row-gap: 30px;
+    .imgTabla{
+        width: 120px;
     }
 
-    /* Aplico el menu que se muestra con icono de barras */
-
-    .iconoMenu{
-        display: block;
+    .videoInicio{
+        width: 80%; 
+        height: 300px;
     }
 
-    .nav ul{
-        position: fixed;
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        width: 100%;
-        height: 80vh;
-        font-weight: bolder;
-        background-color: rgb(128, 128, 128);
-        top: 80px;
-        right: -100%;
-        text-align: center;
-        transition: all 0.5s;
-        border: 2px solid rgb(0, 0, 0) ;
-        border-radius: 20px;
-        z-index: 1000;
+    /* Inicio pagina colecciones */
+    /* Tamaño imagenes */
+    .vAlign{
+        width: 120px;
     }
-    
-    .nav ul li{
-        display: block;
-        margin: 35px 0;
-        line-height: 10px;
-        padding: 0;
-        margin-top: 50px;
-    }
+    /* Fin pagina colecciones */
 
-    .nav ul li a{
-        font-size: 20px;
+    /* Inicio pagina Sobre nosoros */
+    .imgMiembros{
+        height: 170px;
+        width: 250px;
     }
-
-    .nav ul li a:hover, .nav ul li a:active{
-        background: none;
-        color: black;
-    }
-
-    /* Aplico checkbox para mostrar el menu al hacerle click */
-
-    #check:checked ~ .nav ul{
-        right: 0;
-        width: 30vw;
-        margin-right: 20px;
-    }
-
-    /* Contenido pagina inicial */
-
-    #infoInicio{
-        display: grid;
-        grid-template-columns: 100vw;
-        grid-template-rows: 20px auto 280px;
-        row-gap: 20px;
-        column-gap: 20px;
-    }
-
-    #infoInicio h2{
-        grid-column: 1/2;
-        grid-row: 1/2;
-        justify-self: center;
-        margin-top: 10px;
-    }
-    
-    #textoInicio{
-        grid-column: 1/2;
-        grid-row: 2/3;
-        margin: 10px 5px 0px 5px;
-        text-align: center;
-        justify-self: center;
-        font-size: 1rem;
-    }
-    
-    #videoInicio{
-        width: 65vw;
-        grid-column: 1/2;
-        grid-row: 3/4;
-        margin-top: 10px;
-        align-self: center;
-        justify-self: center;
-    }
-
-    #coleccionables{
-        margin-top: 70px;
-    }
-
-    /* Modifico tabla inicio */
-    
-    #tablaInicio{
-        width: 350px;
-        margin: 20px auto;
-    }
-
-    #tablaInicio th{
-        font-size: 1rem;
-    }
-
-    #tablaInicio td img{
-        width: 150px;
-    }
-
-    #tablaInicio td{
-        font-size: 1rem;
-    }
-    
-    /* Modifico parrafo pagina inicio */
-
-    #infoExtra{
-        margin-top: 70px;
-        padding-top: 20px;
-    }
-    
-    #infoExtra p{
-        margin: 20px 5px 0px 5px;
-        font-size: 1rem;
-        text-align: center;
-    } 
-
-     /* Pagina Colecciones */
-
-    /* Creo grid dentro del grid de posicionamiento de tablas para crear las tablas de las diferentes colecciones */
-    #tablaColecciones1{
-        grid-row: 2/3;
-        grid-column: 1/3;
-        margin-top: 20px;
-        margin-left: 10px;
-        margin-right: 10px;
-        display: grid;
-        grid-template-columns: repeat(2, 3fr);
-        grid-template-rows: auto;
-        row-gap: 20px;
-        column-gap: 20px;
-    }
-    #tablaColecciones2{
-        grid-row: 3/4;
-        grid-column: 1/3;
-        margin-top: 20px;
-        margin-left: 10px;
-        margin-right: 10px;
-        display: grid;
-        grid-template-columns: repeat(2, 3fr);
-        grid-template-rows: auto;
-        row-gap: 20px;
-        column-gap: 20px;
-    }
-    #tablaColecciones3{
-        grid-row: 4/5;
-        grid-column: 1/3;
-        margin-top: 20px;
-        margin-left: 10px;
-        margin-right: 10px;
-        display: grid;
-        grid-template-columns: repeat(2, 3fr);
-        grid-template-rows: auto;
-        row-gap: 20px;
-        column-gap: 20px;
-    }
-    /* Clase generica del texto tipo caption de las tablas */
-    .caption{
-        grid-row: 1/2;
-        grid-column: 1/3;
-        justify-self: center;
-    }
-
-    /* Clases genericas de los items de las tablas donde van posicionados */
-    .itemImg1{
-        grid-row: 2/3;
-        grid-column: 1/2;
-        justify-self: center;
-    }
-
-    .itemImg2{
-        grid-row: 2/3;
-        grid-column: 2/3;
-        justify-self: center;
-    }
-
-    .itemImg3{
-        grid-row: 4/5;
-        grid-column: 1/2;
-        justify-self: center;
-    }
-
-    .itemImg4{
-        grid-row: 4/5;
-        grid-column: 2/3;
-        justify-self: center;
-    }
-
-    .itemTxt1{
-        grid-row: 3/4;
-        grid-column: 1/2;
-        justify-self: center;
-    }
-
-    .itemTxt2{
-        grid-row: 3/4;
-        grid-column: 2/3;
-        justify-self: center;
-    }
-
-    .itemTxt3{
-        grid-row: 5/6;
-        grid-column: 1/2;
-        justify-self: center;
-    }
-
-    .itemTxt4{
-        grid-row: 5/6;
-        grid-column: 2/3;
-        justify-self: center;
-    }
-
-    /* Pagina Sobre nosotros */
-
-    /* Maquetacion grid miembros */
     .tablaMiembros{
-        margin-top: 30px;
         display: grid;
-        grid-template-columns: repeat(2, 3fr);
-        grid-template-rows: auto;
-        row-gap: 30px;
+        grid-template-columns: 2;
+        row-gap: 20px;
     }
-    
     .captionMiembros{
         grid-column: 1/3;
         grid-row: 1/2;
     }
-    
+
     .imgMiembros1{
         grid-column: 1/2;
         grid-row: 2/3;
-        justify-self: center;
     }
-    
     .imgMiembros2{
         grid-column: 2/3;
         grid-row: 2/3;
-        justify-self: center;
     }
-    
     .imgMiembros3{
         grid-column: 1/2;
         grid-row: 4/5;
-        justify-self: center;
     }
     .imgMiembros4{
         grid-column: 2/3;
         grid-row: 4/5;
-        justify-self: center;
     }
-    
+
     .txtMiembros1{
         grid-column: 1/2;
         grid-row: 3/4;
-        justify-self: center;
     }
     .txtMiembros2{
         grid-column: 2/3;
         grid-row: 3/4;
-        justify-self: center;
     }
     .txtMiembros3{
         grid-column: 1/2;
-        grid-row: 6/7;
-        justify-self: center;
+        grid-row: 5/6;
     }
     .txtMiembros4{
         grid-column: 2/3;
-        grid-row: 6/7;
-        justify-self: center;
-    }
-}
-
-@media only screen and (min-width: 901px) and (max-width: 1265px){
-
-     /* Pagina Colecciones */
-
-    /* Creo grid dentro del grid de posicionamiento de tablas para crear las tablas de las diferentes colecciones */
-    #tablaColecciones1{
-        grid-row: 2/3;
-        grid-column: 1/3;
-        margin-top: 20px;
-        margin-left: 20px;
-        margin-right: 20px;
-        display: grid;
-        grid-template-columns: repeat(3, 2fr);
-        grid-template-rows: auto;
-        row-gap: 20px;
-    }
-    #tablaColecciones2{
-        grid-row: 3/4;
-        grid-column: 1/3;
-        margin-top: 20px;
-        margin-left: 20px;
-        margin-right: 20px;
-        display: grid;
-        grid-template-columns: repeat(3, 2fr);
-        grid-template-rows: auto;
-        row-gap: 20px;
-    }
-    #tablaColecciones3{
-        grid-row: 4/5;
-        grid-column: 1/3;
-        margin-top: 20px;
-        margin-left: 20px;
-        margin-right: 20px;
-        display: grid;
-        grid-template-columns: repeat(3, 2fr);
-        grid-template-rows: auto;
-        row-gap: 20px;
-    }
-    /* Clase generica del texto tipo caption de las tablas */
-    .caption{
-        grid-row: 1/2;
-        grid-column: 1/4;
-        justify-self: center;
-    }
-
-    /* Clases genericas de los items de las tablas donde van posicionados */
-    .itemImg1{
-        grid-row: 2/3;
-        grid-column: 1/2;
-        justify-self: center;
-    }
-
-    .itemImg2{
-        grid-row: 2/3;
-        grid-column: 2/3;
-        justify-self: center;
-    }
-
-    .itemImg3{
-        grid-row: 2/3;
-        grid-column: 3/4;
-        justify-self: center;
-    }
-
-    .itemImg4{
-        grid-row: 4/5;
-        grid-column: 2/3;
-        justify-self: center;
-    }
-
-    .itemTxt1{
-        grid-row: 3/4;
-        grid-column: 1/2;
-        justify-self: center;
-    }
-
-    .itemTxt2{
-        grid-row: 3/4;
-        grid-column: 2/3;
-        justify-self: center;
-    }
-
-    .itemTxt3{
-        grid-row: 3/4;
-        grid-column: 3/4;
-        justify-self: center;
-    }
-
-    .itemTxt4{
         grid-row: 5/6;
-        grid-column: 2/3;
-        justify-self: center;
     }
+    /* Fin pagina sobre nosotros */
+
 }
 
-@media only screen and (min-width: 1266px){
-    p{
-        font-size: 1.5rem;
+@media only screen and (min-width: 768px) and (max-width: 991px){
+
+    .imgTabla{
+        width: 120px;
     }
 
-    h1{
-        font-size: 3.2rem;
+    .videoInicio{
+        width: 80%; 
+        height: 300px;
     }
 
-    h2{
-        font-size: 3rem;
+    /* Inicio pagina colecciones */
+    /* Tamaño imagenes */
+    .vAlign{
+        width: 170px;
     }
+    /* Fin pagina colecciones */
 
-  /* Modifiacion grid pagina inicio inicio */
-    #infoInicio{
+    /* Inicio pagina Sobre nosoros */
+    .imgMiembros{
+        height: 170px;
+        width: 250px;
+    }
+    .tablaMiembros{
         display: grid;
-        grid-template-columns: repeat(2, 3fr);
-        grid-template-rows: 50px auto;
+        grid-template-columns: 2;
         row-gap: 20px;
-        column-gap: 20px;
     }
-
-    #infoInicio h2{
+    .captionMiembros{
         grid-column: 1/3;
         grid-row: 1/2;
-        justify-self: center;
-        margin-top: 10px;
     }
 
-    #textoInicio{
+    .imgMiembros1{
         grid-column: 1/2;
         grid-row: 2/3;
-        margin-left: 20px;
-        margin-top: 10px;
-        text-align: center;
-        justify-content: center;
+    }
+    .imgMiembros2{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .imgMiembros3{
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+    .imgMiembros4{
+        grid-column: 2/3;
+        grid-row: 4/5;
     }
 
-    #videoInicio{
-        width: 600px;
+    .txtMiembros1{
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    .txtMiembros2{
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+    .txtMiembros3{
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+    .txtMiembros4{
+        grid-column: 2/3;
+        grid-row: 5/6;
+    }
+    /* Fin pagina sobre nosotros */
+
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+
+    .imgTabla{
+        width: 180px;
+    }
+
+    .videoInicio{
+        width: 700px;
         height: 400px;
+    }
+
+    /* Inicio pagina colecciones */
+    .vAlign{
+        width: 190px;
+    }
+    /* Fin pagina colecciones */
+
+    /* Inicio pagina Sobre nosoros */
+    .imgMiembros{
+        height: 170px;
+        width: 250px;
+    }
+    .tablaMiembros{
+        display: grid;
+        grid-template-columns: 2;
+        row-gap: 20px;
+    }
+    .captionMiembros{
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+
+    .imgMiembros1{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .imgMiembros2{
         grid-column: 2/3;
         grid-row: 2/3;
-        margin-top: 10px;
-        justify-self: center;
+    }
+    .imgMiembros3{
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+    .imgMiembros4{
+        grid-column: 2/3;
+        grid-row: 4/5;
     }
 
-    #coleccionables{
-        margin-top: 90px;
+    .txtMiembros1{
+        grid-column: 1/2;
+        grid-row: 3/4;
     }
-
-    /* Modifico tabla inicio */
-
-    #tablaInicio{
-        margin: 20px auto;
+    .txtMiembros2{
+        grid-column: 2/3;
+        grid-row: 3/4;
     }
-
-    #tablaInicio td{
-        font-size: 1.5rem;
+    .txtMiembros3{
+        grid-column: 1/2;
+        grid-row: 5/6;
     }
-
-    #tablaInicio th{
-        font-size: 2.1rem;
+    .txtMiembros4{
+        grid-column: 2/3;
+        grid-row: 5/6;
     }
+    /* Fin pagina sobre nosotros */
 
-    /* Modifico parrafo pagina inicio */
-
-    #infoExtra{
-        margin-top: 90px;
-        padding-top: 20px;
-    }
-
-    #infoExtra p{
-        margin-top: 20px;
-        text-align: center;
-    } 
-
-    /* Modifico el footer */
-    footer{
-        background-repeat: repeat;
-    }
-
-    /* Modificacion pagina roadmap */
-
-    h3{
-        font-size: 2.3rem;
-    }
-
-    li{
-        font-size: 1.5rem;
-    }
-
-    /* Aqui modifico la linea central del roadmap */
-section.line svg{
-    height: 2100px;
 }
 
-/* Pagina Miembros */
+@media only screen and (min-width: 1200px){
+    .imgTabla{
+        width: 180px;
+    }
 
-.txtMiembros{
-    text-align: center;
-    font-size: 1.5rem;
-}
+    .videoInicio{
+        width: 700px;
+        height: 400px;
+    }
 
-/* Pagina colecciones */
+    /* Inicio pagina colecciones */
+    /* Tamaño imagenes */
+    .vAlign{
+        width: 280px;
+    }
+    /* Fin pagina colecciones */
 
-.txtTabla{
-    text-align: center;
-    font-size: 1.5rem;
-    margin-left: 20px;
-    margin-right: 20px;
-}
+    /* Inicio pagina Sobre nosoros */
 
-/* Pagina contacto */
+    .imgMiembros{
+        height: 190px;
+        width: 270px;
+    }
+    .tablaMiembros{
+        display: grid;
+        grid-template-columns: 4;
+        column-gap: 20px;
+        row-gap: 40px;
+    }
+    .captionMiembros{
+        grid-column: 1/5;
+        grid-row: 1/2;
+    }
 
-#formularioContacto{
-    width: 60vw;
-}
+    .imgMiembros1{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .imgMiembros2{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .imgMiembros3{
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+    .imgMiembros4{
+        grid-column: 4/5;
+        grid-row: 2/3;
+    }
+
+    .txtMiembros1{
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    .txtMiembros2{
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+    .txtMiembros3{
+        grid-column: 3/4;
+        grid-row: 3/4;
+    }
+    .txtMiembros4{
+        grid-column: 4/5;
+        grid-row: 3/4;
+    }
+    /* Fin pagina sobre nosotros */
 
 }
