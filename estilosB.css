@@ -6,6 +6,10 @@ body#pagInicio, #pagRoadmap, #pagColecciones, #pagSobreNosotros{
     color: #fff;
 }
 
+main{
+    min-height: 800px;
+}
+
 /* Pagina Inicio */
 
 table tr td{
@@ -583,6 +587,10 @@ table tr td{
 
 @media only screen and (min-width: 1200px){
 
+    #pagSobreNosotros{
+        height: 100vh;
+    }
+
     .imgTabla{
         width: 180px;
     }
@@ -658,15 +666,16 @@ table tr td{
     }
 
     /* Inicio pagina Sobre nosoros */
+
     .imgMiembros{
-        height: 170px;
-        width: 250px;
+        height: 190px;
+        width: 270px;
     }
     .tablaMiembros{
         display: grid;
         grid-template-columns: 4;
         column-gap: 20px;
-        row-gap: 20px;
+        row-gap: 40px;
     }
     .captionMiembros{
         grid-column: 1/5;
